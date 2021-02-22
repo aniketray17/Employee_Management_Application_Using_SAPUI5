@@ -1,0 +1,111 @@
+<mvc:View
+	controllerName="sap.ui.demo.nav.controller.Employee"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form"
+	busyIndicatorDelay="0">
+	<Page
+		id="employeePage"
+		title="{i18n>employeeDetailsOf} {employeeData>FirstName} {employeeData>LastName}"
+		showNavButton="true"
+		navButtonPress=".onNavBack"
+		class="sapUiResponsiveContentPadding">
+		<content>
+			<Panel
+				id="employeePanel"
+				width="auto"
+				class="sapUiResponsiveMargin sapUiNoContentPadding">
+				<headerToolbar>
+					<Toolbar>
+						<Title text="{i18n>EmployeeIDColon} {employeeData>EmployeeID}" level="H2"/>
+						<Button
+							icon="sap-icon://edit"
+							text="Edit Data"
+							press="onEdit"
+							visible="{oVisibleModel>/bEdit}" 
+							enabled="true"/>
+
+						<Button
+							icon="sap-icon://save"
+							text="Save Data"
+							press="onSave"
+							visible="{oVisibleModel>/bDisplay}"
+							enabled="true" />
+						
+						<ToolbarSpacer />
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<f:SimpleForm
+						minWidth="1024"
+						editable="true"
+						layout="ResponsiveGridLayout"
+						labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4"
+						columnsL="1" columnsM="1">
+						<f:content>
+							<Label text="{i18n>formFirstName}"/>	
+							<Text text="{employeeData>FirstName}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--first name-->
+							<Label text="{i18n>formFirstName}"/>
+							<Input value="{employeeData>FirstName}" visible="{oVisibleModel>/bEditSimpleForm}"/>	
+
+							<Label text="{i18n>formLastName}"/>		
+							<Text text="{employeeData>LastName}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--last name-->
+							<Label text="{i18n>formLastName}"/>
+							<Input value="{employeeData>LastName}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>formAddress}"/>
+							<Text text="{employeeData>Address}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--address-->
+							<Label text="{i18n>formAddress}"/>
+							<Input value="{employeeData>Address}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>formPhoneHome}"/>
+							<Text text="{employeeData>HomePhone}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--phone-->
+							<Label text="{i18n>formPhoneHome}"/>
+							<Input value="{employeeData>HomePhone}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>formCity}"/>
+							<Text text="{employeeData>City}, {employeeData>Region}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>	<!--city-->
+							<Label text="{i18n>formCity}"/>
+							<Input value="{employeeData>City}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+							
+							<Label text="{i18n>formRegion}"/>
+							<Label text="Enter Region"/>
+							<Input value="{employeeData>Region}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>deposite}"/>			
+							<Text text="{employeeData>Deposit}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--deposit-->
+							<Label text="{i18n>deposite}"/>
+							<Input value="{employeeData>Deposit}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+
+							<Label text="{i18n>joiningDate}"/>
+							<Text text="{employeeData>JoiningDate}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>			<!--joining date-->
+							<Label text="{i18n>joiningDate}"/>
+							<Input value="{employeeData>JoiningDate}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>department}"/>
+							<Text text="{employeeData>Department}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--department-->
+							<Label text="{i18n>department}"/>
+							<Input value="{employeeData>Department}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>workingLocation}"/>
+							<Text text="{employeeData>Country}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>				<!--working location-->
+							<Label text="{i18n>workingLocation}"/>
+							<Input value="{employeeData>Country}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>ownsVehicle}"/>
+							<Text text="{employeeData>Own_Vehicle}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>			<!--owns vehicle-->
+							<Label text="{i18n>ownsVehicle}"/>
+							<Input value="{employeeData>Own_Vehicle}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+
+							<Label text="{i18n>vehicleType}"/>
+							<Text text="{employeeData>Vehicle_Type}" visible="{oVisibleModel>/bDisplaySimpleForm}"/>			<!--vehicle type-->
+							<Label text="{i18n>vehicleType}"/>
+							<Input value="{employeeData>Vehicle_Type}" visible="{oVisibleModel>/bEditSimpleForm}"/>
+						</f:content>
+					</f:SimpleForm>
+				</content>
+			</Panel>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,89 @@
+{
+	"_version": "1.21.0",
+	"sap.app": {
+		"id": "sap.ui.employee",
+		"type": "application",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+  	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui.demo.nav.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui.demo.nav.i18n.i18n",
+					"supportedLocales": [
+						""
+					],
+					"fallbackLocale": ""
+				}
+			},
+			"employeeData": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Employees.json"
+			}
+		},
+		"routing": {
+			"config": {
+			   "routerClass": "sap.m.routing.Router",
+			   "viewType": "XML",
+			   "viewPath": "sap.ui.demo.nav.view",
+			   "controlId": "app",
+			   "controlAggregation": "pages",
+			   "transition": "slide",
+			   "async": true
+			},
+			"routes": [{
+			   "pattern": "",
+			   "name": "appHome",
+			   "target": "home"
+			}, {
+				"pattern": "employees",
+				"name": "addEmployee",
+				"target": "addEmployee"
+			}, {
+				"pattern": "employees/{index}/{employeeId}",
+				"name": "employee",
+				"target": "employee"
+			}],
+			"targets": {
+			   "home": {
+				  "viewId": "home",
+				  "viewName": "Home"
+			   },
+				"addEmployee": {
+					"viewId": "addEmployee",
+					"viewName": "addEmployee"
+				},
+				"employee": {
+					"viewId": "employee",
+					"viewName": "Employee"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,78 @@
+[
+	{
+		"EmployeeID": 1,
+		"LastName": "Ya",
+		"FirstName": "Jason",
+		"Address": "777 Brockton Avenue",
+		"City": "Abington MA 2351",
+		"Deposit": "3654 $",
+		"Region": "WA",
+		"JoiningDate" : "21-11-2009",
+		"Department" : "Production",
+		"Country": "USA",
+		"HomePhone": "(206) 555-9857",
+		"Own_Vehicle":"Yes",
+		"Vehicle_Type":"Sedan"
+		
+	},
+	{
+		"EmployeeID": 2,
+		"LastName": "David",
+		"FirstName": "Jak",
+		"Address": "908 W. Capital Way",
+		"City": "Tacoma",
+		"Deposit": "3201 $",
+		"Region": "WA",
+		"JoiningDate" : "01-01-2011",
+		"Department" : "Designing",
+		"Country": "USA",
+		"HomePhone": "(301) 547-5489",
+		"Own_Vehicle":"Yes",
+		"Vehicle_Type":"Sports Car"
+	},
+	{
+		"EmployeeID": 3,
+		"LastName": "DSouza",
+		"FirstName": "Jenilia",
+		"Address": "722 Moss Bay Blvd.",
+		"City": "Kirkland",
+		"Deposit": "3014 $",
+		"Region": "WA",
+		"JoiningDate" : "12-02-2009",
+		"Department" : "Development",
+		"Country": "USA",
+		"HomePhone": "(215) 489-4792",
+		"Own_Vehicle":"Yes",
+		"Vehicle_Type":"Hatchback"
+	},
+	{
+		"EmployeeID": 4,
+		"LastName": "DSouza",
+		"FirstName": "Rick",
+		"Address": "4110 Old Redmond Rd.",
+		"City": "Redmond",
+		"Deposit": "4578 $",
+		"Region": "WA",
+		"JoiningDate" : "13-03-2005",
+		"Department" : "Management",
+		"Country": "USA",
+		"HomePhone": "(458) 945-5486",
+		"Own_Vehicle":"Yes",
+		"Vehicle_Type":"Minivan"
+	},
+	{
+		"EmployeeID": 5,
+		"LastName": "Reck",
+		"FirstName": "Suan",
+		"Address": "1456 New Redmond Rd.",
+		"City": "Redmond",
+		"Deposit": "5684 $",
+		"Region": "OI",
+		"JoiningDate" : "21-12-2001",
+		"Department" : "Production",
+		"Country": "USA",
+		"HomePhone": "(458) 487-8981",
+		"Own_Vehicle":"Yes",
+		"Vehicle_Type":"Sports Car"
+	}
+]

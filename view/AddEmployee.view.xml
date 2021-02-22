@@ -1,0 +1,69 @@
+<mvc:View controllerName="sap.ui.demo.nav.controller.AddEmployee" 
+xmlns="sap.m" 
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:f="sap.ui.layout.form">
+   
+   <App id="addEmployee">
+   <pages>
+		<Page id="AddEmployeeForm" title="{i18n>addNewEmployee}" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<f:SimpleForm id="newForm" layout="ResponsiveGridLayout" title="{i18n>enterTheEmployeeDetails}"
+			editable="true">
+				<f:content>
+
+					<Label text="{i18n>enterFirstName}"/>
+					<Input id="empFirst" placeholder="{i18n>enterFirstName}" value="{employeeData>/newData/FirstName}" liveChange="savePname" required="true" width="50%"/>
+
+					<Label text="{i18n>enterLastName}"/>
+					<Input id ="empLast" placeholder="{i18n>enterLastName}" value="{employeeData>/newData/LastName}" liveChange="saveLName" required="true" width="50%"/>
+
+					<Label text="{i18n>employeeAddress}"/>
+					<Input id="empAddress" placeholder="{i18n>enterAddress}" value="{employeeData>/newData/Address}" liveChange="saveAddress" required="true" width="50%"/>
+
+					<Label text="{i18n>enterCity}"/>
+					<Input id="empCity" placeholder="{i18n>enterCity}" value="{employeeData>/newData/City}" liveChange="saveCity" required="true" width="50%"/>
+
+					<Label text="{i18n>enterAmount}"/>
+					<Input id="empAmount" placeholder="{i18n>enterAmount}" value="{employeeData>/newData/Deposit}" liveChange="saveAmount" type="Number" required="true" width="50%"/>
+					
+					<Label text="{i18n>enterRegion}"/>
+					<Input id="empRegion" placeholder="{i18n>enterRegion}" value="{employeeData>/newData/Region}" liveChange="saveRegion" required="true" width="50%"/>
+
+					<Label text="{i18n>joiningDate}"/>
+					<DatePicker id="empDate" value="{employeeData>/newData/JoiningDate}" required="true" width="50%"/>
+
+					<Label text="{i18n>enterDepartment}"/>
+					<Input id="empDepartment" placeholder="{i18n>enterDepartment}" value="{employeeData>/newData/Department}" liveChange="saveDepartment" required="true" width="50%"/>
+
+					<Label text="{i18n>enterCountry}"/>
+					<Input id="empCountry" placeholder="{i18n>enterCountry}" value="{employeeData>/newData/Country}" liveChange="saveCountry" required="true" width="50%"/>
+
+					<Label text="{i18n>enterContactNumber}"/>
+					<Input id="empContact" placeholder="{i18n>enterContactNumber}" value="{employeeData>/newData/HomePhone}" liveChange="savePhone" type="Number" required="true" width="50%"/>
+
+					<Label text="{i18n>haveVehicle}"/>
+					<Input id="empOwnsVehicle" placeholder="{i18n>ownsVehicle}" value="{employeeData>/newData/Own_Vehicle}" liveChange="saveOwnsVehicle" required="true" width="50%"/>
+
+					<Label text="{i18n>vehicleType}"/>
+					<Input id="empVehicle" placeholder="{i18n>vehicleType}" value="{employeeData>/newData/Vehicle_Type}" liveChange="saveVehicle" required="true" width="50%"/>
+
+				</f:content>
+					<Button
+					text="Cancel"
+					icon="sap-icon://cancel"
+					class="sapUiSmallMargin"
+					width="50%"
+					press=".onNavBack"/>
+
+					<Button
+					text="Save"
+					icon="sap-icon://save"
+					class="sapUiSmallMargin"
+					width="50%"
+					press=".onSaveData"/>
+			</f:SimpleForm>
+		</content>
+		</Page>
+   </pages>
+   </App>
+</mvc:View>
