@@ -9,7 +9,7 @@
 				<Toolbar>
 					<Title text="{i18n>ListOfAllEmployees}"/>
 					<ToolbarSpacer/>
-					<SearchField width="30%" search=".onFilterEmployees"/>
+					<SearchField width="30%" liveChange=".onFilterEmployees"/>
 					<Button
 						id="addEmployee" icon="sap-icon://add-employee" text="Add Employee"
 						press=".onNavToEmployees"/>		

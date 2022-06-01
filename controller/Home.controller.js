@@ -16,7 +16,8 @@ sap.ui.define([
 		},
 		onFilterEmployees:function(oEvent){
 			var aFilter =[];
-			var sQuery = oEvent.getParameter("query");
+			// var sQuery = oEvent.getParameter("query");
+			var sQuery = oEvent.getSource().getValue();
 			if (sQuery) {
 				aFilter.push(new Filter("FirstName", FilterOperator.Contains, sQuery));
 			}
